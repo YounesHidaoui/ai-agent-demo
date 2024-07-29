@@ -5,6 +5,10 @@ import { OpenAIStream, StreamingTextResponse } from "ai";
 // See https://vercel.com/docs/concepts/functions/edge-functions
 export const runtime = "edge";
 
+
+console.log(process.env.OPENAI_API_KEY);
+
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY!,
 });

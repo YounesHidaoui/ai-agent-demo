@@ -11,6 +11,8 @@ import { FacebookIcon } from "./components/icons/FacebookIcon";
 import { LinkedInIcon } from "./components/icons/LinkedInIcon";
 import Conversation from "./components/Conversation";
 
+import n1 from "../public/n1.png"
+
 export default function Home() {
   useEffect(() => {
     init({ orgId: "5HWAN" });
@@ -26,7 +28,7 @@ export default function Home() {
               <a className="flex items-center" href="/">
                 <Image
                   className="w-40 md:w-auto h-8 max-w-[12.5rem] sm:max-w-none"
-                  src="/deepgram.svg"
+                  src={n1}
                   alt="Deepgram Logo"
                   width={0}
                   height={0}
@@ -35,7 +37,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex items-center justify-center md:gap-6 text-sm">
-              <span className="mt-1">
+              {/* <span className="mt-1">
                 <GitHubButton
                   href="https://github.com/deepgram-devs/deepgram-conversational-demo"
                   data-color-scheme="no-preference: light; light: light; dark: light;"
@@ -45,9 +47,9 @@ export default function Home() {
                 >
                   Star
                 </GitHubButton>
-              </span>
+              </span> */}
 
-              <span className="gradient-shadow bg-gradient-to-r to-[#13EF93]/50 from-[#149AFB]/80 rounded">
+              {/* <span className="gradient-shadow bg-gradient-to-r to-[#13EF93]/50 from-[#149AFB]/80 rounded">
                 <a
                   href="https://console.deepgram.com/signup?jump=keys"
                   target="_blank"
@@ -55,7 +57,7 @@ export default function Home() {
                 >
                   Get an API Key
                 </a>
-              </span>
+              </span> */}
             </div>
           </header>
         </div>
@@ -67,7 +69,7 @@ export default function Home() {
 
         {/* height 4rem */}
         <div className=" backdrop-blur-[2px] h-[4rem] flex items-center">
-          <footer className="mx-auto w-full max-w-7xl px-4 md:px-6 lg:px-8 flex items-center justify-center gap-4 md:text-xl font-inter text-[#8a8a8e]">
+          {/* <footer className="mx-auto w-full max-w-7xl px-4 md:px-6 lg:px-8 flex items-center justify-center gap-4 md:text-xl font-inter text-[#8a8a8e]">
             <span className="text-base text-[#4e4e52]">share it</span>
             <a
               href="#"
@@ -124,7 +126,7 @@ export default function Home() {
             >
               contact us
             </a>
-          </footer>
+          </footer> */}
         </div>
       </div>
     </>

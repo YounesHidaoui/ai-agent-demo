@@ -139,12 +139,18 @@ const voiceMap = (model: string) => {
   return voices[model];
 };
 
+
 const getApiKey = async (): Promise<string> => {
+
   const result: CreateProjectKeyResponse = await (
     await fetch("/api/authenticate", { cache: "no-store" })
   ).json();
 
+  console.log(result);
+  
+
   return result.key;
+
 };
 
 const DeepgramContextProvider = ({ children }: DeepgramContextInterface) => {
@@ -206,7 +212,7 @@ const DeepgramContextProvider = ({ children }: DeepgramContextInterface) => {
       });
 
       connection.addListener(LiveTranscriptionEvents.Close, () => {
-        toast("The connection to Deepgram closed, we'll attempt to reconnect.");
+        toast("The connection to NeloVoice Demo closed, we'll attempt to reconnect.");
         setConnectionReady(false);
         connection.removeAllListeners();
         setConnection(undefined);
@@ -214,7 +220,7 @@ const DeepgramContextProvider = ({ children }: DeepgramContextInterface) => {
 
       connection.addListener(LiveTranscriptionEvents.Error, () => {
         toast(
-          "An unknown error occured. We'll attempt to reconnect to Deepgram."
+          "An unknown error occured. We'll attempt to reconnect to nelovoice demo."
         );
         setConnectionReady(false);
         connection.removeAllListeners();
